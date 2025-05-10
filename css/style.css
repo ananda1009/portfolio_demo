@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.menu-btn{
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn {
+    position: fixed;
+    background: crimson;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 6px;
+    color: white;
+    right: 30px;
+    bottom: 40px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+}
+a{
+    text-decoration: none;
+    font-size: 25px;
+  
+}
+a:hover{
+    background: transparent;
+    color: crimson;
+}
+.max-width{
+    width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+ 
+}
+.navbar{
+    background: transparent;
+    padding: 30px 0;
+    font-family: 'Ubuntu',sans-serif;
+    position: fixed;
+    min-width: 100%;
+    transition: all .3s ease;
+    z-index: 99;
+
+
+
+}
+.navbar.sticky {
+    background: crimson;
+    padding: 15px 0;
+}
+.navbar .logo span{
+    color: crimson;
+}
+.navbar.sticky .logo span{
+    color: white;
+}
+.navbar .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffff;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar ul li a{
+    color: #fff;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.home{
+    background: linear-gradient(to right bottom ,rgba(79, 145, 108, 0.2),rgba(35, 54, 127, 0.75)),url(../images/banner.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu',sans-serif;
+    color: #fff;
+}
+.home .content{
+    padding: 350px 0;
+    text-align-last: left;
+}
+.home .content .text1 {
+    font-size: 27px;
+}
+.home .content .text2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .content .text3 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.home .content .text3 span {
+    color: crimson;
+}
+.home .content a {
+  font-size: 25px;
+  display: inline-block;
+  color: white;
+  padding: 11px 18px;
+  background: crimson;
+  border: 2px solid crimson;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: all .3s ease;
+}
+.home .content a:hover{
+    background: transparent;
+    color: crimson;
+}
+section{
+    padding: 100px 0;
+
+    
+}
+section .title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 179px;
+    background: black;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section .title::after {
+    content: "about us";
+    position: absolute;
+    font-size: 20px;
+    color: crimson;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+}
+.about,.service,.skills,.teams,.contact{
+    font-family: "Poppins",sans-serif;
+}
+.about .about-content,.service .service-content,.skills .skills-content,.contact .contact-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .about-content .column{
+    width: calc(50% - 20px);
+}
+.about .about-content img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .text span{
+    color: crimson;
+}
+.about .about-content p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.about .about-content a {
+    padding: 12px 24px;
+    font-size: 16px;
+    display: inline-block;
+  color: white;
+  padding: 11px 18px;
+  background: crimson;
+  border: 2px solid crimson;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: all .3s ease;
+}
+.service,.teams{
+    background: black;
+    color: white;
+}
+.service .title::before,.teams .title::before{
+    background: white;
+}
+.service .title::after,.teams .title::after{
+    background: black;
+    content: "what we provide";
+}
+.service .service-content .card{
+    width: calc(33.3% - 20px);
+    background: #111;
+     text-align: center; 
+    padding: 40px;  
+    border-radius: 6px;
+    transition: all .3s ease;
+}
+.service .service-content .card .box i{
+        font-size: 40px;
+        color: crimson;
+}
+.service .service-content .card:hover .box{
+    transform: scale(1.05);
+}
+.service .service-content .card:hover .box i{
+    color: white;
+}
+.service .service-content .card .box .text{
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;   
+}
+.service .service-content .card .box p{
+    margin-top: 10px;   
+}
+.skills .title::after {
+        content: "what we know";
+
+}
+.skills .skills-content .column{
+    width: calc(50% - 20px);
+}
+.skills .skills-content .left .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;    
+}
+.skills .skills-content .left p{
+    text-align: justify;    
+    margin-bottom: 10px;   
+    font-size: 20px; 
+}
+.skills .skills-content .left a{
+    padding: 12px 24px;
+    font-size: 16px;
+    display: inline-block;
+  color: white;
+  padding: 11px 18px;
+  background: crimson;
+  border: 2px solid crimson;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: all .3s ease;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;    
+    font-size: 20px;
+    font-weight: 400;
+}
+.skills .skills-content .right .line{
+    width: 100%;    
+    height: 5px;    
+    background: lightgray;
+    margin-top: 5px;
+    position: relative;    
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    background: crimson;
+    height: 100%;   
+    width: 50%; 
+}
+.teams .box img{
+    width: 150px;   
+    height: 150px;  
+    border-radius: 50%;
+    border:5px solid crimson;
+}
+.teams .cards {
+    background: #222;
+    border-radius: 6px;
+    padding: 20px 0;  
+    transition: all .3s ease;
+}
+.teams .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.teams .box .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;   
+}
+.teams .cards:hover .box{
+    transform: scale(1.05);
+}
+.teams .owl-dots {
+    text-align: center; 
+    margin-top: 20px;   
+}
+.teams .owl-dots .owl-dot{
+    width: 15px; 
+    height: 15px;    
+    background: White;
+    border-radius: 50%;
+    margin-left: 5px;   
+}
+.teams .owl-dots .owl-dot.active{
+    background: crimson;
+    width: 35px; 
+    border-radius: 6px;   
+}
+.contact .column{
+    width: calc(50% - 30px);
+}
+.contact .column .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;    
+}
+.contact .left p{
+    text-align: justify;    
+    margin-bottom: 20px;    
+}
+.contact .left .row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 35px;       
+}
+.contact .left .row i{
+    font-size: 35px;
+    font-weight: 500;
+    color: crimson;
+    margin-right: 10px; 
+}
+.contact .left .row .head{
+   
+    color: #333;
+    font-weight: 600;
+}
+.contact .left .row .subtitle{
+    color: #333;
+}
+.contact .right form .field input,.contact .right form .fields input,.contact .right form .textarea textarea{
+    width: 100%;    
+    height: 100%;   
+    padding: 0 15px;
+    font-size: 17px;
+    border-radius: 6px;
+    border: 1px solid lightgray ;
+    outline: none;  
+    margin-bottom: 10px;    
+}
+.contact .right form .fields {
+    display: flex;
+}
+.contact .right form .fields .name{
+    margin-right: 10px; 
+}
+.contact .right form .fields .email{
+    margin-left: 10px; 
+}
+.contact .right form .fields .field,.contact .right form .field{
+    height: 35px;   
+    width: 100%;    
+    margin-bottom: 10px;    
+}
+.contact .right form .textarea textarea{
+    resize: none;
+}
+.contact .right form button {
+    background: crimson;
+    padding: 12px 36px;
+    display: block;
+    width: 100%;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 25px;
+}
+footer a{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Poppins",sans-serif;
+    color: crimson;
+}
+footer{
+    background: #111;
+    padding: 23px 22px;
+    color: #fff;
+}
+
+.ani {
+  animation-duration: 3s;
+  animation-name: slidein;
+    animation-direction: normal;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+      
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
